@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- sweet alert  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- daisyui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+
+    <!-- google fonts  -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap");
+      .tiro-bangla {
+        font-family: "Tiro Bangla", serif;
+      }
+
+      .hind-siliguri {
+        font-family: "Hind Siliguri", sans-serif;
+      }
+      .poppins {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .active {
+        background-color: #422ad5;
+        color: white;
+      }
+    </style>
+    <!-- fontawesome cdn  -->
+    <script
+      src="https://kit.fontawesome.com/d3c51e1ef5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>English Janala</title>
+  </head>
+  <body class="poppins">
+    <header
+      class="hidden z-10 fixed w-full px-8 py-4 border-b-2 border-[#C6BDBD] bg-[#F2F2F2]"
+    >
+      <div class="flex justify-between items-center">
+        <div>
+          <h2 class="flex items-center text-2xl">
+            <span class="font-semibold">Enligh</span>
+            <img src="assets/logo.png" alt="" />
+            <span class="tiro-bangla">জানালা</span>
+          </h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#FAQ">
+            <button
+              class="btn flex items-center border-2 border-[#422AD5] text-[#422AD5] bg-transparent hover:bg-[#422AD5] hover:text-white"
+            >
+              <i class="fa-solid fa-circle-question mr-1"></i> FAQ
+            </button></a
+          >
+          <a href="#learn">
+            <button
+              class="btn flex items-center border-2 border-[#422AD5] text-[#422AD5] bg-transparent hover:bg-[#422AD5] hover:text-white"
+            >
+              <i class="fa-solid fa-book-open mr-1"></i> Learn
+            </button></a
+          >
+          <button
+            id="logoutBtn"
+            class="btn flex items-center border-2 border-[#422AD5] text-[#422AD5] bg-transparent hover:bg-[#422AD5] hover:text-white"
+          >
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-2 pb-8 px-8">
+      <section
+        id="heroSection"
+        class="flex justify-between flex-col md:flex-row items-center"
+      >
+        <div class="md:w-[46%]">
+          <h1 class="text-4xl mb-4 font-bold">
+            <span class="text-[#00BCFF]">English</span> is Easy!!
+          </h1>
+          <p class="hind-siliguri">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+            অন্য একটি Level এ
+          </p>
+          <input
+            id="nameInput"
+            type="text"
+            class="block mt-4 text-sm py-1 px-3 w-72 border-gray-400 rounded-sm h-9"
+            placeholder="Enter Your Name"
+          />
+          <input
+            id="passwordInput"
+            type="password"
+            class="block mt-4 text-sm py-1 px-3 w-72 border-gray-400 rounded-sm h-9 mb-4"
+            placeholder="Enter Login code (123456)"
+          />
+          <button class="btn bg-[#422AD5] text-[#E0E7FF] mt-2" id="getStarted">
+            Get Started
+          </button>
+        </div>
+        <div class="md:w-[45%]">
+          <img src="assets/hero-student.png" alt="" class="w-full" />
+        </div>
+      </section>
+
+      <section id="learn" class="hidden pt-28">
+        <h1 class="text-4xl font-bold text-center mb-14">
+          <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+        </h1>
+
+        <div id="lessonButtons" class="justify-center flex gap-4 mb-10"></div>
+
+        <div class="bg-[#F8F8F8] rounded-2xl p-6" id="lessons">
+          <div class="text-center p-4">
+            <p class="hind-siliguri text-[#79716B] text-sm mt-16">
+              আপনি এখনো কোন Lesson Select করেন নি
+            </p>
+            <h1 class="text-3xl hind-siliguri mt-3 mb-16">
+              একটি <span class="font-semibold">Lesson Select</span> করুন।
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-32 hidden mb-24" id="FAQ">
+        <h1 class="text-4xl font-bold text-center mb-14">
+          <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+        </h1>
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 mt-3 bg-[#F8F8F8]"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            The difference between var, let, and const
+          </div>
+          <div class="collapse-content text-sm">
+            var: Function-scoped, can be redeclared and updated, hoisted with
+            undefined value, not recommended due to scoping issues <br />
+            let: Block-scoped, can be updated but not redeclared in the same
+            scope, hoisted but not initialized, safer than var. <br />
+            const: Block-scoped, cannot be updated or redeclared, must be
+            initialized during declaration, ensures immutability for primitive
+            values.
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 mt-3 bg-[#F8F8F8]"
+        >
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">
+            The difference between map(), forEach(), and filter()
+          </div>
+          <div class="collapse-content text-sm">
+            map(): Returns a new array by applying a function to each element
+            without modifying the original array. <br />
+            forEach(): Iterates over an array and executes a function for each
+            element but does not return a new array. <br />
+            filter(): Returns a new array containing only the elements that
+            satisfy a given condition.
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 mt-3 bg-[#F8F8F8]"
+        >
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">
+            Explain arrow functions and how they are different from regular
+            functions
+          </div>
+          <div class="collapse-content text-sm">
+            Arrow functions are a concise way to write functions using =>. They
+            do not have their own this, instead, they inherit this from the
+            surrounding scope. Unlike regular functions, they cannot be used as
+            constructors and do not have the arguments object. They are useful
+            for short, inline functions and callbacks.
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 mt-3 bg-[#F8F8F8]"
+        >
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">
+            How JavaScript Promises work
+          </div>
+          <div class="collapse-content text-sm">
+            JavaScript Promises handle asynchronous operations and have three
+            states: pending, fulfilled, or rejected. A promise executes a task
+            and resolves with .then() on success or .catch() on failure. They
+            help avoid callback hell and improve readability in async code.
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 mt-3 bg-[#F8F8F8]"
+        >
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">
+            How closures work in JavaScript
+          </div>
+          <div class="collapse-content text-sm">
+            A closure in JavaScript is a function that remembers and can access
+            variables from its outer scope even after the outer function has
+            finished executing. This happens because inner functions maintain a
+            reference to their parent’s scope. Closures are useful for data
+            privacy, function factories, and maintaining state.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="flex justify-between items-center px-8 pt-20 pb-14 border-t border-[#C6BDBD]"
+    >
+      <div>
+        <h2 class="flex items-center text-xl mb-2">
+          <span class="font-semibold">Enligh</span>
+          <img src="assets/logo.png" alt="" />
+          <span class="tiro-bangla">জানালা</span>
+        </h2>
+        <h2 class="hind-siliguri flex items-center mb-1">ইংরেজি শিখুন সহজে</h2>
+        <p class="text-[10px]">Providing ED-Tech Applications since 2025</p>
+      </div>
+      <div>
+        <p class="text-[#18181B60] text-sm">Follow Us</p>
+        <div class="flex items-center gap-4 mt-2">
+          <a href="https://www.facebook.com/" target="_blank">
+            <i
+              class="text-[1.65rem] fa-brands fa-facebook hover:text-[#0866FF]"
+            ></i>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <i class="text-3xl fa-brands fa-youtube hover:text-[#FF0033]"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <i
+              class="text-[1.65rem] fa-brands fa-instagram hover:text-[#FE1F7D]"
+            ></i>
+          </a>
+          <a href="https://github.com/" target="_blank">
+            <i
+              class="text-[1.65rem] fa-brands fa-github hover:text-[#35383c]"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog id="lessonDetails" class="modal"></dialog>
+
+    <script src="script/index.js"></script>
+  </body>
+</html>
