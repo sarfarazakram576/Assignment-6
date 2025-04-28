@@ -79,7 +79,7 @@ const loadLessons = (level) => {
           "shadow-[#DADADA]"
         );
         div.innerHTML = `
-  <div class="p-6 border-2 border-[#EDF7FF] rounded-lg h-62 hover:bg-[#F2FBFF]">
+  <div class="p-6 border-2 border-[#EDF7FF] rounded-lg h-auto md:h-68 hover:bg-[#F2FBFF]">
   <h1 class="text-center font-bold text-2xl ">${data.word}</h1>
   <p class="text-center font-semibold text-sm my-6">( Meaning ) / ( Pronunciation ) </p>
 
