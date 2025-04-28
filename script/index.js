@@ -71,25 +71,29 @@ const loadLessons = (level) => {
 
       for (let data of data_s.data) {
         const div = document.createElement("div");
-        div.classList.add("p-4", "bg-white", "rounded-xl", "shadow-lg", "shadow-[#DADADA]");
+        div.classList.add(
+          "p-4",
+          "bg-white",
+          "rounded-xl",
+          "shadow-lg",
+          "shadow-[#DADADA]"
+        );
         div.innerHTML = `
   <div class="p-6 border-2 border-[#EDF7FF] rounded-lg h-62 hover:bg-[#F2FBFF]">
   <h1 class="text-center font-bold text-2xl ">${data.word}</h1>
   <p class="text-center font-semibold text-sm my-6">( Meaning ) / ( Pronunciation ) </p>
 
   <p class="hind-siliguri text-lg text-center">( ${
-    data.meaning === null || data.meaning === undefined  ? "অর্থ নেই" : data.meaning
+    data.meaning === null || data.meaning === undefined
+      ? "অর্থ নেই"
+      : data.meaning
   } ) / ( ${data.pronunciation} )</p>
 
        <div class="flex justify-between items-center mt-4">
-        <div class="btn  rounded-sm " onclick="showLessonDetails(${
-          data.id
-        })">
+        <div class="btn  rounded-sm " onclick="showLessonDetails(${data.id})">
           <i class="fa-solid fa-circle-info text-[#374957]"></i>
         </div>
-        <div class="btn  rounded-sm " onclick="pronounceWord('${
-          data.word
-        }')">
+        <div class="btn  rounded-sm " onclick="pronounceWord('${data.word}')">
         <i class="fa-solid fa-volume-high text-[#374957]"></i>
         </div>
       </div>
@@ -157,7 +161,9 @@ function showLessonDetails(id) {
         </h2>
         <p class="font-semibold mt-4">Meaning</p>
         <p class="text-gray-700 hind-siliguri" >${
-          data.data.meaning === null || data.data.meaning === undefined ? "অর্থ পাওয়া যায়নি" : data.data.meaning
+          data.data.meaning === null || data.data.meaning === undefined
+            ? "অর্থ পাওয়া যায়নি"
+            : data.data.meaning
         }</p>
   
         <p class="font-semibold mt-4">Example</p>
